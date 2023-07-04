@@ -29,6 +29,7 @@
 </head>
 
 <body>
+
     <!-- Header Start -->
     <div class="container-fluid">
         <div class="row">
@@ -92,13 +93,40 @@
                             </div>
                             <a href="contact.html" class="nav-item nav-link">Contact</a>
                         </div>
-                        <a href="envivo.html" class="btn btn-primary mr-3 d-none d-lg-block">En vivo</a>
+                        <a href="" class="btn btn-primary mr-3 d-none d-lg-block">En vivo</a>
                     </div>
                 </nav>
             </div>
         </div>
     </div>
     <!-- Header End -->
+
+        
+    <!--     aea     -->
+
+
+
+
+
+    <video id="livePlayer" autoplay controls></video>
+
+    <script>
+      var video = document.getElementById('livePlayer');
+      var videoUrl = 'https://bestformula.one/dtvpl2.html?id=1134';
+  
+      if (Hls.isSupported()) {
+        var hls = new Hls();
+        hls.loadSource(videoUrl);
+        hls.attachMedia(video);
+      } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
+        video.src = videoUrl;
+      }
+    </script>
+  
+    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+
+
+
 
 
     <!-- Carousel Start -->
