@@ -26,6 +26,27 @@
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+
+
+
+
+
+
+    
+    <style>
+        #video-player {
+          width: 100%;
+        }
+      </style>
+    
+
+
+
+
+
+
+
+
 </head>
 
 <body>
@@ -107,54 +128,18 @@
 
 
 
-    <video id="livePlayer" autoplay controls></video>
-
-    <script>
-      var video = document.getElementById('livePlayer');
-      var videoUrl = 'https://bestformula.one/dtvpl2.html?id=1134';
-  
-      if (Hls.isSupported()) {
-        var hls = new Hls();
-        hls.loadSource(videoUrl);
-        hls.attachMedia(video);
-      } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
-        video.src = videoUrl;
-      }
-    </script>
-  
-    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
 
 
 
 
+    
 
-
-
-
-
-
-
-
-
-
-    <div class="embed-responsive embed-responsive-16by9">
-        <iframe src="https://www.facebook.com/video/embed?video_id=681782657080228" class="embed-responsive-item" allowfullscreen></iframe>
+    <div style="display: flex; justify-content: center;">
+        <iframe width="1080" height="607.5" src="https://www.youtube.com/embed/cDiWGuqzzio" title="Video en vivo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
     </div>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+    
 
 
 
