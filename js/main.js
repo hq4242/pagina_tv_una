@@ -181,3 +181,27 @@ window.fbAsyncInit = function() {
         }
     });
 };
+
+
+const visualizer = document.querySelector('.visualizer');
+
+function updateVisualizer(scale) {
+  visualizer.style.transform = `scaleY(${scale})`;
+}
+
+// Simula cambios en el visualizador basados en la música (por ejemplo, usando eventos de tiempo)
+function simulateMusicVisualization() {
+  setInterval(() => {
+    const randomScale = Math.random() * 1.5 + 0.5; // Genera una escala aleatoria para el visualizador
+    updateVisualizer(randomScale);
+  }, 500);
+}
+
+simulateMusicVisualization();
+
+
+const openPlayerButton = document.getElementById('openPlayer');
+
+openPlayerButton.addEventListener('click', () => {
+  const playerWindow = window.open('player.html', '_blank', 'width=400,height=300');
+});
